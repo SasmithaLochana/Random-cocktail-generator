@@ -37,10 +37,12 @@ h1 {
 }
 
 .card:hover {
-  color: white ;
-  font-weight: 800;
+  color: white;
+  -webkit-text-stroke: 1px #000;
   transition: color 1s;
+  
 }
+
 .card:hover:before,
 .card:hover:after {
   animation: none;
