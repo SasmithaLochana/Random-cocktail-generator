@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Random Cocktail Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+</head>
+
+<body>
+  <h1>Your Cocktail is:</h1>
+  <% if (locals.drink) { %>
+  <div class="card" style="background-image: url('<%= drink.image %>');">
+    <ul>
+      <p>Ingredients for this drink</p>
+      <% ingredients.forEach(ingredient => { %>
+          <li><%= ingredient %></li>
+      <% }); %>
+    </ul>
+  </div>
+  <p class="user">
+    <%= drink.name %>
+  </p>
+  <p class="type"><%= drink.type %></p>
+  <% } %>
+</body>
+
+</html>
